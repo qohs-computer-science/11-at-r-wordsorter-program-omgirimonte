@@ -1,3 +1,4 @@
+// Owen Girimonte pd 7 10/1/2024
 import java.io.File;
 import java.util.Scanner;
 public class WordSorter 
