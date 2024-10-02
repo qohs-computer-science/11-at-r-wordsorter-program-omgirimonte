@@ -1,15 +1,21 @@
+package WordSorterManager;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class WordSorterManager {
     public ArrayList<String>[] list; 
     public String letters;
 
+    @SuppressWarnings("unchecked")
     public WordSorterManager(){
-        list = new ArrayList [26];
+        list = new ArrayList[26];
+        for (int x = 0; x<list.length; x++){
+            list[x]= new ArrayList<String>();
+        }
         letters = "abcdefghijklmnopqrstuvwxyz";
     }
 
     public void add(String word){
-        list[letters.indexOf(word.toLowerCase().charAt(0))].add(word.toLowerCase);
+        list[letters.indexOf(word.toLowerCase().charAt(0))].add(word.toLowerCase());
     }
 
     public void getInput (Scanner input){
@@ -26,14 +32,15 @@ public class WordSorterManager {
 
             if (ans==1){
                 System.out.print("Please enter your specefic letter: ");
-                char lett = input.nextLine();
-
+                char letter = input.nextLine().charAt(0);
+                for (String word : list [letters.indexOf(letter)])
+                    System.out.println(word);
             }
             else if(ans==2){
-                for ()
+                
             }
             else if(ans==3){
-                for (int x = 0;)
+                
             }
             else if(ans==4){
                 
@@ -41,7 +48,7 @@ public class WordSorterManager {
             else if(ans==5){
                 System.out.println("What is the word you want removed? ");
                 String rem = input.nextLine();
-
+                //ArrayList<String>[] temporary = ;
             }
             else if(ans==6){
                 run = false;

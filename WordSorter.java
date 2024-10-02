@@ -1,10 +1,12 @@
 // Owen Girimonte pd 7 10/1/2024
+import WordSorterManager.WordSorterManager;
 import java.io.File;
 import java.util.Scanner;
 public class WordSorter 
 {
 	public static void main(String[] args) 
 	{
+		WordSorterManager wordSorterManager = new WordSorterManager();
 		Scanner in = new Scanner(System.in); 
 		try
 		{
