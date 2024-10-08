@@ -30,10 +30,9 @@ public class WordSorter
 			word = word.replace(":", "");
 			word = word.replace("!", "");
 			word = word.replace("?", "");
-			word = word.replace("'", "");
-			System.out.println(word);
-			
-			
+			word = word.replace("'", "");			
+			wordSorterManager.add(word);
 		}
+		wordSorterManager.getInput();
 	}
 }
